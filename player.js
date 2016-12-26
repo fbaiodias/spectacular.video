@@ -1,4 +1,7 @@
-const video = document.querySelector('video')
+const video = document.querySelector('iframe')
+
+const getYoutubeUrl = (videoId) =>
+  `http://youtube.com/embed/${videoId}?autoplay=1&controls=0&iv_load_policy=3&loop=1&rel=0&showinfo=0&showsearch=0&playsinline=1&playlist=${videoId}`
 
 const updateVideoPosition = () => {
   const height = window.innerHeight
@@ -13,7 +16,6 @@ const updateVideoPosition = () => {
   video.style.marginLeft = -1 * (hip - width) / 2
 }
 
-updateVideoPosition()
 window.onresize = updateVideoPosition
 
 const step = 3
@@ -33,3 +35,10 @@ window.addEventListener('deviceorientation', (e) => {
   rotation = -e.gamma
   updateVideoRotation()
 })
+
+const match = window.location.search.match(/v=([^&]*)/)
+if (match) {
+  const url = getYoutubeUrl(match[1])
+  video.src = url
+  updateVideoPosition()
+}

@@ -6,20 +6,65 @@
   <style>
     body {
       background: black;
-      overflow: hidden;
+      color: white;
+      text-align: center;
+      font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing: 0.02em;
     }
 
-    video {
-      z-index: -1000;
+    header {
+      color: black;
+      background: yellow;
+      height: 40vh;
+      padding: 20vh 0;
+    }
+
+    h1 {
+      font-size: 10vw;
+    }
+
+    input, button {
+      padding: 20px;
+      border-radius: 5px;
+      border: 0;
+    }
+
+    input {
+      width: 80vw;
+    }
+
+    button {
+      background: black;
+      color: yellow;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+
+    a {
+      color: yellow;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 20px;
+      font-style: italic;
     }
   </style>
 </head>
-<body>
-  <video src="specs.mp4" autoplay loop muted playsinline>
-    Sorry, your browser doesn't support embedded videos,
-    but don't worry, you can <a href="specs.mp4">download it</a>
-    and watch it with your favorite video player!
-  </video>
 
-  <script src="index.js" type="text/javascript"></script>
+<body>
+  <header>
+    <h1>Spectacular</h1>
+    <input type="text" placeholder="Insert YouTube video url here..." value="https://www.youtube.com/watch?v=g0-vl2faKk0">
+    <button>GO!</button>
+  </header>
+
+  <footer>
+    <p>Made with <3 by <a href="https://twitter.com/xicombd">Francisco Baio Dias</a>.</p>
+    <p>Source code available on <a href="https://github.com/xicombd/spectacular">GitHub</a>.</p>
+  </footer>
+
+  <script src="home.js" type="text/javascript"></script>
 </body>
