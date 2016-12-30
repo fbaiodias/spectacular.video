@@ -8,10 +8,33 @@
       background: black;
       overflow: hidden;
     }
+
+    .logo {
+      position: absolute;
+      color: yellow;
+      top: 0;
+      left: 0;
+      width: 120px;
+      height: 120px;
+      background: black;
+      border-bottom-right-radius: 100%;
+      z-index: 10;
+    }
+
+    .logo a {
+      position: absolute;
+      color: yellow;
+      text-decoration: none;
+      transform: rotate(-45deg);
+      top: 40px;
+      left: 10px;
+    }
   </style>
 </head>
 <body>
   <iframe frameborder="0" allowfullscreen=""></iframe>
+
+  <div class="logo"><a href="/">Spectacular</a></div>
 
   <script src="player.js" type="text/javascript"></script>
 </body>
