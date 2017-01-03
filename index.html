@@ -18,7 +18,8 @@
       color: black;
       background: yellow;
       height: 40vh;
-      padding: 20vh 0;
+      padding: 0 5vw;
+      padding-top: 10vh;
     }
 
     h1 {
@@ -33,7 +34,7 @@
     }
 
     input {
-      width: 80vw;
+      width: 70vw;
     }
 
     button {
@@ -48,8 +49,35 @@
       text-decoration: none;
     }
 
+    .steps {
+      position: relative;
+    }
+
+    .step {
+      display: inline-block;
+      width: 33%;
+      color: yellow;
+      padding: 30px 0;
+      min-width: 200px;
+    }
+
+    .step .icon {
+      margin: 20px auto;
+      text-align: center;
+      font-size: 30px;
+      line-height: 50px;
+      color: black;
+      background: yellow;
+      width: 50px;
+      height: 50px;
+      padding: 20px;
+      border-radius: 50%;
+      font-weight: bolder;
+    }
+
     footer {
       padding: 20px;
+      padding-top: 100px;
       font-style: italic;
     }
   </style>
@@ -58,9 +86,25 @@
 <body>
   <header>
     <h1>Spectacular</h1>
-    <input type="text" placeholder="Insert YouTube video url here..." value="https://www.youtube.com/watch?v=g0-vl2faKk0">
+    <label>Enter a YouTube video url bellow:</label>
+    <input type="text" placeholder="Eg: https://www.youtube.com/watch?v=g0-vl2faKk0" value="https://www.youtube.com/watch?v=g0-vl2faKk0">
     <button>GO!</button>
   </header>
+
+  <div class="steps">
+    <div class="step">
+      <div class="icon">1.</div>
+      Export Story
+    </div>
+    <div class="step">
+      <div class="icon">2.</div>
+      Upload to YouTube
+    </div>
+    <div class="step">
+      <div class="icon">3.</div>
+      Share your spectacular.video
+    </div>
+  </div>
 
   <footer>
     <p>Made with <3 by <a href="https://twitter.com/xicombd">Francisco Baio Dias</a>.</p>
